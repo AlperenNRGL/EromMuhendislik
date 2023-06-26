@@ -1,0 +1,237 @@
+.top-text {
+    background-color: rgb(43, 43, 43);
+    border-bottom: none;
+}
+
+.top-text .text{
+    color: rgb(242, 242, 242);
+}
+
+.navbar{
+    background-color: black;
+    z-index: 1;
+}
+
+.navigation-bar {
+    background-color: black;
+}
+
+.navigation-bar ul *{
+    color: white;
+}
+
+
+.first-label{
+    padding: 40px 10px 60px 10px;
+    text-align: center;
+    background-color: rgb(242, 242, 242);
+
+}
+
+ .first-label .big-label{
+    font-size: 42px;
+    color: rgb(43, 43, 43);
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    letter-spacing: .5px;
+    line-height: 50px;
+}
+
+ .first-label .exception{
+    font-size: 14px;
+    color: rgb(43, 43, 43);
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.navigation{
+    height: 48px;
+    overflow: hidden;
+    box-shadow: 0px 2px 3px rgb(229, 221, 221);
+    display: flex;
+    align-items: center;
+}
+
+.navigation .first-navigation a{
+    font-weight: 700;
+    color: rgb(41, 55, 94);
+    font-size: 13px;
+    padding-left: 20px;
+}
+
+.navigation .navigation-divide{
+    height: 18px;
+    aspect-ratio: 1;
+    border-top: 1px solid rgb(233, 233, 233);
+    border-right: 1px solid rgb(233, 233, 233);
+    transform:  rotate(45deg) ;
+    margin-left: 10px;
+}
+
+.navigation .second-navigation a{
+    color: rgb(128, 128, 128);
+    padding: 10px 25px;
+    font-size: 13px;
+}
+
+.main-region{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 25px;
+    overflow: hidden;
+    width: 90vw;
+    margin: 0 auto;
+}
+
+.main-region img{
+    width: 90%;
+
+}
+
+.main-region p{
+    color: rgb(119, 122, 141);
+    width: 100%;
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 300;
+
+}
+.main-region h2{
+    color: black;
+    margin: 25px 0 2px 0;
+}
+
+.main-region iframe{
+    border: 0;
+    height: 300px;
+}
+.project-image{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 80px 30px;
+}
+
+.project-image .first-div{
+    width: 100%;
+    margin-bottom: -7px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+}
+
+.project-image div .box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: all .3s  linear ;
+    background-color: rgba(255, 255, 255, .9);
+}
+
+.project-image div .box:hover{
+    opacity: 1;
+}
+
+.project-image div .box h4{
+    color: black;
+    letter-spacing: 1.5px;
+}
+
+.project-image div .box p{
+    color: rgb(176, 143, 48);
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+.project-image img{
+    width: 100%;
+}
+
+.image-modal{
+    position: fixed;
+    inset: 0;
+    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+}
+
+
+.image-modal img{
+    position: absolute;
+    inset: 50%;
+    height: 65%;
+    transform: translate(-50%, -50%);
+    max-width: 1500px;
+}
+
+
+
+.image-modal .box{
+    position: relative;
+    inset: 50%;
+    height: 75%;
+    width: 90% ;
+    transform: translate(-50%, -50%);
+}
+
+.image-modal button{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    appearance: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.image-modal  svg{
+    width: 37px;
+    aspect-ratio: 1;
+}
+
+.image-modal .left-icon{
+    left: 15px;
+}
+.image-modal .right-icon{
+    right: 15px;
+}
+
+.image-modal .close-icon{
+    top: -15px;
+    right: 10px;
+}
+.image-modal .close-icon svg{
+    width: 16px;
+}
+
+
+@media (min-width : 768px) {
+    .main-region{
+        flex-direction: row;
+        padding: 90px;
+    }
+    .main-region img{
+        width: 50%;
+    }
+    .main-region iframe{
+        width: 80%;
+        height: 500px;
+    }
+    .project-image{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+}
+
+@media (min-width : 1024px){
+    .project-image{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
